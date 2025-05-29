@@ -15,7 +15,7 @@ rm -rf ~/.local/share/nvim
 #### Clone `lazy.nvim` plugin manager
 
 ```bash
-git clone --branch=stable --filter=blob:none https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy.nvim
+git clone --branch=stable --filter=blob:none https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy/lazy.nvim
 ```
 
 #### Load `lazy.nvim`
