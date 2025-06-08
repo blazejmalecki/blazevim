@@ -16,6 +16,6 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   spec = { { import = "plugins" } },
-  install = { colorscheme = { "tokyonight" } },
+  install = { colorscheme = { "catppuccin-macchiato" } },
   checker = { enabled = true },
 })
