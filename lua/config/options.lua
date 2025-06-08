@@ -25,7 +25,7 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- Preview substitutions live, as you type!
+-- Preview substitutions live
 vim.o.inccommand = "split"
 
 -- Minimal number of screen lines to keep above and below the cursor
