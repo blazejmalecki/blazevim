@@ -16,9 +16,13 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Load various options
+require("config.options")
+
 -- Load plugins
 require("lazy").setup({
   spec = { { import = "plugins" } },
   install = { colorscheme = { "tokyonight" } },
   checker = { enabled = true },
 })
+
