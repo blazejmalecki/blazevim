@@ -22,15 +22,15 @@ return {
       end,
     },
     {
-      "<leader>fb",
+      "<leader>fj",
       function()
-        require("fzf-lua").builtin()
+        require("fzf-lua").jumps()
       end,
     },
     {
-      "<leader>fm",
+      "<leader>fb",
       function()
-        require("fzf-lua").manpages()
+        require("fzf-lua").builtin()
       end,
     },
     {
