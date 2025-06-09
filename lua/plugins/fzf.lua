@@ -4,6 +4,12 @@ return {
   opts = {},
   keys = {
     {
+      "<leader><leader>",
+      function()
+        require("fzf-lua").buffers()
+      end,
+    },
+    {
       "<leader>ff",
       function()
         require("fzf-lua").files()
@@ -19,6 +25,12 @@ return {
       "<leader>fg",
       function()
         require("fzf-lua").live_grep()
+      end,
+    },
+    {
+      "<leader>/",
+      function()
+        require("fzf-lua").lgrep_curbuf()
       end,
     },
     {
