@@ -4,60 +4,60 @@ return {
   opts = {},
   keys = {
     {
-      "<leader><leader>",
+      "<leader>f.",
       function()
         require("fzf-lua").buffers()
       end,
-      desc = "[FZF] Find buffers",
+      desc = "Find buffers",
     },
     {
       "<leader>ff",
       function()
         require("fzf-lua").files()
       end,
-      desc = "[FZF] Find files",
+      desc = "Find files",
     },
     {
       "<leader>fh",
       function()
         require("fzf-lua").files({ cwd = "~" })
       end,
-      desc = "[FZF] Find files in ~"
+      desc = "Find files in ~"
     },
     {
       "<leader>fg",
       function()
         require("fzf-lua").live_grep()
       end,
-      desc = "[FZF] Live grep",
+      desc = "Live grep",
     },
     {
-      "<leader>/",
+      "<leader>f/",
       function()
         require("fzf-lua").lgrep_curbuf()
       end,
-      desc = "[FZF] Live grep in buffer",
+      desc = "Live grep in buffer",
     },
     {
       "<leader>fj",
       function()
         require("fzf-lua").jumps()
       end,
-      desc = "[FZF] Find jumps",
+      desc = "Find jumps",
     },
     {
       "<leader>fb",
       function()
         require("fzf-lua").builtin()
       end,
-      desc = "[FZF] Builtin commands",
+      desc = "Builtin commands",
     },
     {
       "<leader>fr",
       function()
         require("fzf-lua").resume()
       end,
-      desc = "[FZF] Resume last command",
+      desc = "Resume last command",
     },
   },
 }
