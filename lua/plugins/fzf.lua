@@ -39,25 +39,32 @@ return {
       desc = "Live grep in buffer",
     },
     {
+      "<leader>fl",
+      function()
+        require("fzf-lua").oldfiles()
+      end,
+      desc = "Recent files",
+    },
+    {
       "<leader>fj",
       function()
         require("fzf-lua").jumps()
       end,
-      desc = "Find jumps",
+      desc = "Recent jumps",
     },
     {
       "<leader>fb",
       function()
         require("fzf-lua").builtin()
       end,
-      desc = "Builtin commands",
+      desc = "Find builtins",
     },
     {
       "<leader>fr",
       function()
         require("fzf-lua").resume()
       end,
-      desc = "Resume last command",
+      desc = "Resume find",
     },
   },
 }
