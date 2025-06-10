@@ -5,5 +5,6 @@ return {
     input = { enabled = true },
     picker = { enabled = true },
     indent = { enabled = true },
+    dashboard = { enabled = true },
   },
 }
