@@ -22,7 +22,7 @@ return {
       function()
         require("fzf-lua").files({ cwd = "~" })
       end,
-      desc = "Find files in ~"
+      desc = "Find files in ~",
     },
     {
       "<leader>fg",

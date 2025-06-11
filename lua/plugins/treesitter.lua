@@ -37,7 +37,7 @@ return {
           },
         },
       })
-    end
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -55,8 +55,8 @@ return {
               ["ac"] = "@class.outer",
             },
           },
-        }
+        },
       })
-    end
+    end,
   },
 }
