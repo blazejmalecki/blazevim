@@ -4,7 +4,6 @@ return {
   opts = {
     input = { enabled = true },
     picker = { enabled = true },
-    indent = { enabled = true },
     explorer = { enabled = true },
     lazygit = { enabled = true },
   },
