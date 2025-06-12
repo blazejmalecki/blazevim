@@ -97,17 +97,13 @@ return {
       lua_ls = {},
       gopls = {},
       pyright = {},
-      rust_analyzer = {},
       ruff = {},
-      sqls = {},
-      dockerls = {},
-      docker_compose_language_service = {},
-      helm_ls = {},
-      terraformls = {},
       marksman = {},
     }
     local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
       "stylua",
+      "goimports",
+      "gofumpt",
     })
 
     require("mason-tool-installer").setup({
