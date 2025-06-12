@@ -93,7 +93,18 @@ return {
     })
     local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
     local servers = {
+      bashls = {},
       lua_ls = {},
+      gopls = {},
+      pyright = {},
+      rust_analyzer = {},
+      ruff = {},
+      sqls = {},
+      dockerls = {},
+      docker_compose_language_service = {},
+      helm_ls = {},
+      terraformls = {},
+      marksman = {},
     }
     local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
       "stylua",
