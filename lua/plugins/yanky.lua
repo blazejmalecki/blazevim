@@ -1,6 +1,8 @@
 return {
   "gbprod/yanky.nvim",
-  dependencies = { "folke/snacks.nvim" },
+  dependencies = {
+    "folke/snacks.nvim",
+  },
   opts = {},
   keys = {
     {
