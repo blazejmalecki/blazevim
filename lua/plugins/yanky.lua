@@ -4,7 +4,7 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>y",
+      "<leader>yh",
       function()
         Snacks.picker.yanky()
       end,

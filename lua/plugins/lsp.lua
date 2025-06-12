@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
+    "saghen/blink.cmp",
     "mason-org/mason.nvim",
     "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -66,17 +67,17 @@ return {
         if
           client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
         then
-          local highlight_augroup = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
+          local highlight_autogroup = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
 
           vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = event.buf,
-            group = highlight_augroup,
+            group = highlight_autogroup,
             callback = vim.lsp.buf.document_highlight,
           })
 
           vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
             buffer = event.buf,
-            group = highlight_augroup,
+            group = highlight_autogroup,
             callback = vim.lsp.buf.clear_references,
           })
 
@@ -117,9 +118,7 @@ return {
         end,
       },
     })
-
-    -- local capabilities = require("blink.cmp").get_lsp_capabilities()
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
     local servers = {
       lua_ls = {},
     }
