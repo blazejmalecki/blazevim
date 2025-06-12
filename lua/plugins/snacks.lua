@@ -6,6 +6,7 @@ return {
     picker = { enabled = true },
     indent = { enabled = true },
     explorer = { enabled = true },
+    lazygit = { enabled = true },
   },
   keys = {
     {
@@ -14,6 +15,13 @@ return {
         Snacks.explorer()
       end,
       desc = "Toggle file explorer",
+    },
+    {
+      "<leader>gg",
+      function()
+        Snacks.lazygit()
+      end,
+      desc = "Open LazyGit",
     },
   },
 }
