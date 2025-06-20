@@ -16,6 +16,7 @@ return {
         draw = {
           treesitter = { "lsp" },
         },
+        border = "rounded",
       },
       ghost_text = {
         enabled = true,
@@ -23,11 +24,15 @@ return {
       documentation = {
         auto_show = true,
         auto_show_delay_ms = 500,
+        window = {
+          border = "rounded",
+        },
       },
     },
     signature = {
       enabled = true,
       window = {
+        border = "rounded",
         show_documentation = true,
       },
     },

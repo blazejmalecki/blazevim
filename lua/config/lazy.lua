@@ -16,6 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Set tab width
+vim.o.tabstop = 4
+
 -- Load plugins
 require("lazy").setup({
   spec = { { import = "plugins" } },
