@@ -71,10 +71,10 @@ return {
       underline = { severity = vim.diagnostic.severity.ERROR },
       signs = {
         text = {
-          [vim.diagnostic.severity.ERROR] = "󰅚 ",
-          [vim.diagnostic.severity.WARN] = "󰀪 ",
-          [vim.diagnostic.severity.INFO] = "󰋽 ",
-          [vim.diagnostic.severity.HINT] = "󰌶 ",
+          [vim.diagnostic.severity.ERROR] = "󰅚",
+          [vim.diagnostic.severity.WARN] = "󰀪",
+          [vim.diagnostic.severity.INFO] = "󰋽",
+          [vim.diagnostic.severity.HINT] = "󰌶",
         },
       },
       virtual_text = {
@@ -98,6 +98,9 @@ return {
       gopls = {},
       pyright = {},
       ruff = {},
+      dockerls = {},
+      docker_compose_language_service = {},
+      terraformls = {},
       marksman = {},
     }
     local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
