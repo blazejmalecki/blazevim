@@ -67,21 +67,21 @@ return {
       function()
         Snacks.picker.lsp_declarations()
       end,
-      desc = "Declaration",
+      desc = "Symbol declaration",
     },
     {
       "<leader>cd",
       function()
         Snacks.picker.lsp_definitions()
       end,
-      desc = "Definition",
+      desc = "Symbol definition",
     },
     {
       "<leader>ci",
       function()
         Snacks.picker.lsp_implementations()
       end,
-      desc = "Implementation",
+      desc = "Symbol implementation",
     },
     {
       "<leader>cr",
@@ -89,14 +89,14 @@ return {
         Snacks.picker.lsp_references()
       end,
       nowait = true,
-      desc = "References",
+      desc = "Symbol references",
     },
     {
       "<leader>ct",
       function()
         Snacks.picker.lsp_type_definitions()
       end,
-      desc = "Type definition",
+      desc = "Symbol type definition",
     },
     {
       "<leader>cs",
