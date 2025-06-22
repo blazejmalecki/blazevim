@@ -8,7 +8,7 @@ return {
       function()
         require("which-key").show({ global = true })
       end,
-      desc = "Show keymaps",
+      desc = "Keymaps",
     },
   },
 }

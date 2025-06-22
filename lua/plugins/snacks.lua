@@ -28,18 +28,53 @@ return {
   },
   keys = {
     {
+      "<leader><leader>",
+      function()
+        Snacks.picker.buffers()
+      end,
+      desc = "Find buffers",
+    },
+    {
+      "<leader>ff",
+      function()
+        Snacks.picker.files()
+      end,
+      desc = "Find files",
+    },
+    {
+      "<leader>fg",
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = "Grep",
+    },
+    {
+      "<leader>fl",
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = "Recent files",
+    },
+    {
+      "<leader>fr",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "Resume find/grep",
+    },
+    {
       "<leader>e",
       function()
         Snacks.explorer()
       end,
-      desc = "Toggle file explorer",
+      desc = "File explorer",
     },
     {
       "<leader>gg",
       function()
         Snacks.lazygit()
       end,
-      desc = "Open LazyGit",
+      desc = "LazyGit",
     },
   },
 }

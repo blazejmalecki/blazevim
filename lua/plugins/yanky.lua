@@ -11,7 +11,7 @@ return {
         Snacks.picker.yanky()
       end,
       mode = { "n", "x" },
-      desc = "Open yank history",
+      desc = "Yank history",
     },
   },
 }

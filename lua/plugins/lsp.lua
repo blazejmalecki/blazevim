@@ -11,49 +11,8 @@ return {
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
       callback = function(event)
-        vim.keymap.set(
-          { "n", "x" },
-          "<leader>ca",
-          vim.lsp.buf.code_action,
-          { buffer = event.buf, desc = "Code actions" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>cD",
-          require("fzf-lua").lsp_declarations,
-          { buffer = event.buf, desc = "Go to declaration" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>cd",
-          require("fzf-lua").lsp_definitions,
-          { buffer = event.buf, desc = "Go to definition" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>ci",
-          require("fzf-lua").lsp_implementations,
-          { buffer = event.buf, desc = "Go to implementation" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>ct",
-          require("fzf-lua").lsp_typedefs,
-          { buffer = event.buf, desc = "Go to type definition" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>cr",
-          require("fzf-lua").lsp_references,
-          { buffer = event.buf, desc = "Find references" }
-        )
-        vim.keymap.set(
-          { "n" },
-          "<leader>ch",
-          require("fzf-lua").lsp_document_diagnostics,
-          { buffer = event.buf, desc = "Buffer diagnostics" }
-        )
-        vim.keymap.set({ "n" }, "<leader>cn", vim.lsp.buf.rename, { buffer = event.buf, desc = "Rename variable" })
+        vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = event.buf, desc = "Code actions" })
+        vim.keymap.set({ "n" }, "<leader>cn", vim.lsp.buf.rename, { buffer = event.buf, desc = "Rename symbol" })
 
         local function client_supports_method(client, method, bufnr)
           if vim.fn.has("nvim-0.11") == 1 then
