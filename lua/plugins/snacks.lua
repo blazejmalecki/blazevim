@@ -63,6 +63,49 @@ return {
       desc = "Resume find/grep",
     },
     {
+      "<leader>cD",
+      function()
+        Snacks.picker.lsp_declarations()
+      end,
+      desc = "Declaration",
+    },
+    {
+      "<leader>cd",
+      function()
+        Snacks.picker.lsp_definitions()
+      end,
+      desc = "Definition",
+    },
+    {
+      "<leader>ci",
+      function()
+        Snacks.picker.lsp_implementations()
+      end,
+      desc = "Implementation",
+    },
+    {
+      "<leader>cr",
+      function()
+        Snacks.picker.lsp_references()
+      end,
+      nowait = true,
+      desc = "References",
+    },
+    {
+      "<leader>ct",
+      function()
+        Snacks.picker.lsp_type_definitions()
+      end,
+      desc = "Type definition",
+    },
+    {
+      "<leader>cs",
+      function()
+        Snacks.picker.lsp_symbols()
+      end,
+      desc = "Symbols",
+    },
+    {
       "<leader>e",
       function()
         Snacks.explorer()
