@@ -12,6 +12,7 @@ return {
       group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
       callback = function(event)
         vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = event.buf, desc = "Code actions" })
+        vim.keymap.set({ "n" }, "<leader>ch", vim.lsp.buf.hover, { buffer = event.buf, desc = "Hover symbol" })
         vim.keymap.set({ "n" }, "<leader>cn", vim.lsp.buf.rename, { buffer = event.buf, desc = "Rename symbol" })
 
         local function client_supports_method(client, method, bufnr)
