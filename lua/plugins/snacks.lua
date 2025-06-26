@@ -42,6 +42,13 @@ return {
       desc = "Find files",
     },
     {
+      "<leader>fc",
+      function()
+        Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+      end,
+      desc = "Find config files",
+    },
+    {
       "<leader>fg",
       function()
         Snacks.picker.grep()
@@ -56,18 +63,18 @@ return {
       desc = "Recent files",
     },
     {
+      "<leader>fm",
+      function()
+        Snacks.picker.man()
+      end,
+      desc = "Find manuals",
+    },
+    {
       "<leader>fr",
       function()
         Snacks.picker.resume()
       end,
       desc = "Resume find/grep",
-    },
-    {
-      "<leader>cD",
-      function()
-        Snacks.picker.lsp_declarations()
-      end,
-      desc = "Symbol declaration",
     },
     {
       "<leader>cd",
