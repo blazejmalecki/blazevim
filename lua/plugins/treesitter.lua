@@ -20,6 +20,7 @@ return {
           "json",
           "yaml",
           "toml",
+          "make",
           "vimdoc",
           "luadoc",
           "markdown",

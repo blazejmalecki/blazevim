@@ -19,6 +19,9 @@ vim.g.maplocalleader = "\\"
 -- Set tab width
 vim.o.tabstop = 4
 
+-- Set minimal number of screen lines to keep above and below the cursor
+vim.o.scrolloff = 8
+
 -- Load plugins
 require("lazy").setup({
   spec = { { import = "plugins" } },
