@@ -14,13 +14,19 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Set leader keys
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 
 -- Set tab width
 vim.o.tabstop = 4
 
+-- Display line numbers
+vim.o.number = true
+
 -- Set minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 8
+
+-- Don't show the mode
+vim.o.showmode = false
 
 -- Load plugins
 require("lazy").setup({
@@ -29,5 +35,4 @@ require("lazy").setup({
 })
 
 -- Set colorscheme
-vim.cmd.colorscheme "catppuccin-macchiato"
-
+vim.cmd.colorscheme("catppuccin-macchiato")
