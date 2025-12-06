@@ -44,11 +44,12 @@ return {
     })
 
     local servers = {}
+    local addons = {
+      "stylua",
+    }
 
     require("mason-tool-installer").setup({
-      ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
-        "stylua",
-      }),
+      ensure_installed = vim.list_extend(vim.tbl_keys(servers), addons),
     })
 
     require("mason-lspconfig").setup({
