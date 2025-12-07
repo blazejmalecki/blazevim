@@ -18,6 +18,7 @@ return {
           },
         },
         ensure_installed = {
+          -- Required
           "c",
           "lua",
           "vim",
@@ -25,6 +26,9 @@ return {
           "query",
           "markdown",
           "markdown_inline",
+          -- Additional
+          "go",
+          "python",
         },
       })
     end,
