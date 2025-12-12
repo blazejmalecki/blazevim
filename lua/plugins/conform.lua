@@ -6,6 +6,13 @@ return {
       lua = {
         "stylua",
       },
+      go = {
+        "goimports",
+        "gofumpt",
+      },
+      python = {
+        "ruff",
+      },
     },
     format_on_save = {
       timeout_ms = 500,

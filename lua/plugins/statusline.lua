@@ -5,8 +5,8 @@ return {
   },
   opts = {
     options = {
-      component_separators = "",
       section_separators = "",
+      component_separators = "",
     },
   },
 }

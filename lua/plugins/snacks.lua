@@ -14,10 +14,10 @@ return {
     notifier = { enabled = true },
     explorer = { enabled = true },
     terminal = { enabled = true },
-    statuscolumn = { enabled = true },
+    lazygit = { enabled = true },
     words = { enabled = true },
     indent = { enabled = true },
-    lazygit = { enabled = true },
+    statuscolumn = { enabled = true },
   },
   keys = {
     {

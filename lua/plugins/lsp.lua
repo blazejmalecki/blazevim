@@ -43,9 +43,15 @@ return {
       },
     })
 
-    local servers = {}
+    local servers = {
+      gopls = {},
+      pyright = {},
+      ruff = {},
+    }
     local addons = {
       "stylua",
+      "goimports",
+      "gofumpt",
     }
 
     require("mason-tool-installer").setup({
