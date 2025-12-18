@@ -3,17 +3,16 @@
 ## Requirements
 
 - [NeoVim](https://formulae.brew.sh/formula/neovim)
-- [Treesitter](https://formulae.brew.sh/formula/tree-sitter)
-- [LazyGit](https://formulae.brew.sh/formula/lazygit)
 - [fd](https://formulae.brew.sh/formula/fd)
 - [fzf](https://formulae.brew.sh/formula/fzf)
 - [ripgrep](https://formulae.brew.sh/formula/ripgrep)
+- [Treesitter](https://formulae.brew.sh/formula/tree-sitter)
+- [LazyGit](https://formulae.brew.sh/formula/lazygit)
 
 ## Install
 
 ```bash
-git clone git@github.com:blazejmalecki/blazevim.git ~/.config/nvim
-rm -rf ~/.config/nvim/.git
+git clone https://github.com/blazejmalecki/blazevim.git ~/.config/nvim
 ```
 
 ## Uninstall
@@ -23,3 +22,4 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 ```
+

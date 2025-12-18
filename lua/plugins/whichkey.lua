@@ -4,11 +4,18 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>?",
+      "<leader>kk",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Local keymaps",
+    },
+    {
+      "<leader>kK",
       function()
         require("which-key").show({ global = true })
       end,
-      desc = "Keymaps",
+      desc = "Global keymaps",
     },
   },
 }

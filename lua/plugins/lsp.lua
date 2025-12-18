@@ -1,27 +1,18 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    "saghen/blink.cmp",
     "mason-org/mason.nvim",
     "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "saghen/blink.cmp",
     "folke/snacks.nvim",
   },
   config = function()
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
       callback = function(event)
-        vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = event.buf, desc = "Code actions" })
         vim.keymap.set({ "n" }, "<leader>ch", vim.lsp.buf.hover, { buffer = event.buf, desc = "Hover symbol" })
         vim.keymap.set({ "n" }, "<leader>cn", vim.lsp.buf.rename, { buffer = event.buf, desc = "Rename symbol" })
-
-        local function client_supports_method(client, method, bufnr)
-          if vim.fn.has("nvim-0.11") == 1 then
-            return client:supports_method(method, bufnr)
-          else
-            return client.supports_method(method, { bufnr = bufnr })
-          end
-        end
       end,
     })
 
@@ -51,26 +42,24 @@ return {
         end,
       },
     })
-    local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
+
     local servers = {
-      bashls = {},
-      lua_ls = {},
+      -- Go
       gopls = {},
+      -- Python
       pyright = {},
       ruff = {},
-      dockerls = {},
-      docker_compose_language_service = {},
-      terraformls = {},
-      marksman = {},
     }
-    local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
+    local addons = {
+      -- Lua
       "stylua",
+      -- Go
       "goimports",
       "gofumpt",
-    })
+    }
 
     require("mason-tool-installer").setup({
-      ensure_installed = ensure_installed,
+      ensure_installed = vim.list_extend(vim.tbl_keys(servers), addons),
     })
 
     require("mason-lspconfig").setup({
@@ -79,7 +68,10 @@ return {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
+          local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
+
           server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+
           require("lspconfig")[server_name].setup(server)
         end,
       },

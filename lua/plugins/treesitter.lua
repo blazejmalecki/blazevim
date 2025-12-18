@@ -1,61 +1,51 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     version = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    main = "nvim-treesitter.configs",
     build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
-        ensure_installed = {
-          "vim",
-          "bash",
-          "lua",
-          "go",
-          "gomod",
-          "gosum",
-          "gowork",
-          "python",
-          "json",
-          "yaml",
-          "toml",
-          "make",
-          "vimdoc",
-          "luadoc",
-          "markdown",
-          "markdown_inline",
-        },
-        incremental_selection = {
+    opts = {
+      indent = { enable = true },
+      highlight = { enable = true },
+      auto_install = true,
+      textobjects = {
+        select = {
           enable = true,
+          lookahead = true,
           keymaps = {
-            init_selection = "<Enter>",
-            node_incremental = "<Enter>",
-            scope_incremental = false,
-            node_decremental = "<Backspace>",
+            ["ic"] = "@class.inner",
+            ["ac"] = "@class.outer",
+            ["if"] = "@function.inner",
+            ["af"] = "@function.outer",
           },
         },
-      })
-    end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        textobjects = {
-          select = {
-            enable = true,
-            lookahead = true,
-            keymaps = {
-              ["if"] = "@function.inner",
-              ["af"] = "@function.outer",
-              ["ic"] = "@class.inner",
-              ["ac"] = "@class.outer",
-            },
-          },
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<Enter>",
+          node_incremental = "<Enter>",
+          node_decremental = "<Backspace>",
+          scope_incremental = false,
         },
-      })
-    end,
+      },
+      ensure_installed = {
+        -- Required
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "markdown",
+        "markdown_inline",
+        -- Additional
+        "go",
+        "python",
+      },
+    },
   },
 }
