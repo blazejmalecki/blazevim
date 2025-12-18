@@ -44,12 +44,16 @@ return {
     })
 
     local servers = {
+      -- Go
       gopls = {},
+      -- Python
       pyright = {},
       ruff = {},
     }
     local addons = {
+      -- Lua
       "stylua",
+      -- Go
       "goimports",
       "gofumpt",
     }
