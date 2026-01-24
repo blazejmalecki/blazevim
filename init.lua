@@ -18,6 +18,7 @@ vim.g.maplocalleader = " "
 
 -- Set tab width
 vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 -- Set minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 8

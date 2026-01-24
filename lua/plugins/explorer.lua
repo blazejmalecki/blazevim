@@ -6,7 +6,7 @@ return {
   opts = {},
   keys = {
     {
-      "<leader><leader>",
+      "<leader>e",
       function()
         require("oil").open()
       end,
