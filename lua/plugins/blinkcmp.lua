@@ -1,36 +1,21 @@
 return {
-  "saghen/blink.cmp",
-  version = "1.*",
-  opts = {
-    completion = {
-      menu = {
-        draw = {
-          treesitter = { "lsp" },
-        },
-      },
-      documentation = {
-        auto_show = true,
-        auto_show_delay_ms = 500,
-      },
-      ghost_text = {
-        enabled = true,
-      },
-    },
-    signature = {
-      enabled = true,
-    },
-    sources = {
-      default = {
-        "lsp",
-        "path",
-        "buffer",
-      },
-    },
-    fuzzy = {
-      implementation = "prefer_rust_with_warning",
-    },
-  },
-  opts_extend = {
-    "sources.default",
-  },
+	"saghen/blink.cmp",
+	version = "1.*",
+	opts = {
+		sources = {
+			default = {
+				"lsp",
+				"path",
+				"buffer",
+			},
+		},
+		completion = {
+			documentation = {
+				auto_show = true,
+			},
+		},
+		signature = { enabled = true },
+		fuzzy = { implementation = "prefer_rust_with_warning" },
+	},
+	opts_extend = { "sources.default" },
 }

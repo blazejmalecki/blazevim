@@ -23,6 +23,9 @@ vim.o.shiftwidth = 2
 -- Set minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 8
 
+-- Set windows boarder
+vim.o.winborder = "rounded"
+
 -- Load plugins
 require("lazy").setup({
   spec = { { import = "plugins" } },

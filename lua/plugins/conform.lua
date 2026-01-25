@@ -11,11 +11,10 @@ return {
 			},
 			python = {
 				"ruff",
+				"ruff_organize_imports",
+				"ruff_format",
 			},
 		},
-		-- format_on_save = {
-		--   timeout_ms = 500,
-		-- },
 		default_format_opts = {
 			lsp_format = "fallback",
 		},

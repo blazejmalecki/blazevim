@@ -3,21 +3,30 @@ return {
 	dependencies = {
 		"mason-org/mason.nvim",
 		"mason-org/mason-lspconfig.nvim",
-		"ibhagwan/fzf-lua",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"saghen/blink.cmp",
+		"ibhagwan/fzf-lua",
 	},
 	config = function()
 		local servers = {
 			-- Go
 			gopls = {},
 			-- Python
-			pyright = {},
+			basedpyright = {},
 			ruff = {},
+		}
+		local addons = {
+			-- Lua
+			"stylua",
+			-- Go
+			"goimports",
+			"gofumpt",
+			-- Python
+			"ruff",
 		}
 
 		require("mason-lspconfig").setup({
-			automatic_installation = true,
-			ensure_installed = servers,
+			ensure_installed =  vim.tbl_keys(servers),
 			handlers = {
 				function(name)
 					lspconfig[name].setup({
@@ -25,6 +34,10 @@ return {
 					})
 				end,
 			},
+		})
+
+		require("mason-tool-installer").setup({
+			ensure_installed = addons,
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -39,11 +52,11 @@ return {
 					require("fzf-lua").lsp_references()
 				end, { buffer = event.buf, desc = "Symbol references" })
 
-				vim.keymap.set({ "n" }, "<leader>cs", function()
+				vim.keymap.set({ "n" }, "gs", function()
 					require("fzf-lua").lsp_document_symbols()
 				end, { buffer = event.buf, desc = "Buffer symbols" })
 
-				vim.keymap.set({ "n" }, "<leader>cS", function()
+				vim.keymap.set({ "n" }, "gS", function()
 					require("fzf-lua").lsp_live_workspace_symbols()
 				end, { buffer = event.buf, desc = "Global symbols" })
 

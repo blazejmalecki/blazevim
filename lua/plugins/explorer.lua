@@ -3,7 +3,11 @@ return {
   dependencies = {
     "nvim-mini/mini.icons",
   },
-  opts = {},
+  opts = {
+		view_options = {
+			show_hidden = true,
+		},
+	},
   keys = {
     {
       "<leader>e",
