@@ -18,9 +18,13 @@ vim.g.maplocalleader = " "
 
 -- Set tab width
 vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 -- Set minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 8
+
+-- Set windows boarder
+vim.o.winborder = "rounded"
 
 -- Load plugins
 require("lazy").setup({
@@ -29,4 +33,4 @@ require("lazy").setup({
 })
 
 -- Set colorscheme
-vim.cmd.colorscheme("catppuccin-macchiato")
+vim.cmd.colorscheme("tokyonight")

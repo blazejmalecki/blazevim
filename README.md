@@ -1,14 +1,5 @@
 # BlazeVim
 
-## Requirements
-
-- [NeoVim](https://formulae.brew.sh/formula/neovim)
-- [fd](https://formulae.brew.sh/formula/fd)
-- [fzf](https://formulae.brew.sh/formula/fzf)
-- [ripgrep](https://formulae.brew.sh/formula/ripgrep)
-- [Treesitter](https://formulae.brew.sh/formula/tree-sitter)
-- [LazyGit](https://formulae.brew.sh/formula/lazygit)
-
 ## Install
 
 ```bash

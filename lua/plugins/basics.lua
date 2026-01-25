@@ -1,5 +1,4 @@
 return {
-  "echasnovski/mini.basics",
-  version = false,
+  "nvim-mini/mini.basics",
   opts = {},
 }
