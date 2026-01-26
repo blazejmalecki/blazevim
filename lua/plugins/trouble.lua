@@ -4,19 +4,19 @@ return {
 	opts = {},
 	keys = {
 		{
-			"<leader>cd",
+			"<leader>xd",
 			"<cmd>Trouble diagnostics toggle filter.buf=0 win.position=bottom<cr>",
-			desc = "Buffer diagnostics",
+			desc = "[Trouble] Buffer diagnostics",
 		},
 		{
-			"<leader>cs",
-			"<cmd>Trouble symbols toggle focus=false win.position=bottom<cr>",
-			desc = "Symbols",
+			"<leader>xs",
+			"<cmd>Trouble symbols toggle win.position=bottom<cr>",
+			desc = "[Trouble] Buffer symbols",
 		},
 		{
-			"<leader>cl",
-			"<cmd>Trouble lsp toggle focus=false win.position=bottom<cr>",
-			desc = "LSP Definitions / references / ...",
+			"<leader>xl",
+			"<cmd>Trouble lsp toggle win.position=bottom<cr>",
+			desc = "[Trouble] Symbol definitions / references / ...",
 		},
 	},
 }

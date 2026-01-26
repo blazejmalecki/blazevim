@@ -26,6 +26,9 @@ vim.o.scrolloff = 8
 -- Set windows boarder
 vim.o.winborder = "rounded"
 
+-- Set keymaps
+require("config.keymaps")
+
 -- Load plugins
 require("lazy").setup({
   spec = { { import = "plugins" } },
