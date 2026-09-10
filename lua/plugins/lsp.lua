@@ -19,8 +19,8 @@ return {
 			-- Lua
 			"stylua",
 			-- Go
-			"goimports",
 			"gofumpt",
+			"goimports",
 			-- Python
 			"ruff",
 		}
@@ -42,24 +42,44 @@ return {
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(event)
-				vim.keymap.set({ "n" }, "K", vim.lsp.buf.hover, { buffer = event.buf, desc = "Hover symbol" })
-
-				vim.keymap.set({ "n" }, "gd", function()
-					require("fzf-lua").lsp_definitions()
-				end, { buffer = event.buf, desc = "Symbol definition" })
-
-				vim.keymap.set({ "n" }, "gr", function()
-					require("fzf-lua").lsp_references()
-				end, { buffer = event.buf, desc = "Symbol references" })
-
-				vim.keymap.set({ "n" }, "gs", function()
-					require("fzf-lua").lsp_document_symbols()
-				end, { buffer = event.buf, desc = "Buffer symbols" })
-
-				vim.keymap.set({ "n" }, "gS", function()
-					require("fzf-lua").lsp_live_workspace_symbols()
-				end, { buffer = event.buf, desc = "Global symbols" })
-
+				vim.keymap.set(
+					{ "n" },
+					"K",
+					vim.lsp.buf.hover,
+					{ buffer = event.buf, desc = "Hover symbol" }
+				)
+				vim.keymap.set(
+					{ "n" },
+					"gd",
+					function()
+						require("fzf-lua").lsp_definitions()
+					end,
+					{ buffer = event.buf, desc = "Symbol definition" }
+				)
+				vim.keymap.set(
+					{ "n" },
+					"gr",
+					function()
+						require("fzf-lua").lsp_references()
+					end,
+					{ buffer = event.buf, desc = "Symbol references" }
+				)
+				vim.keymap.set(
+					{ "n" },
+					"gs",
+					function()
+						require("fzf-lua").lsp_document_symbols()
+					end,
+					{ buffer = event.buf, desc = "Buffer symbols" }
+				)
+				vim.keymap.set(
+					{ "n" },
+					"gS",
+					function()
+						require("fzf-lua").lsp_live_workspace_symbols()
+					end,
+					{ buffer = event.buf, desc = "Global symbols" }
+				)
 				vim.keymap.set(
 					{ "n" },
 					"<leader>cn",

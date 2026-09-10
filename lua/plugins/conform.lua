@@ -11,8 +11,8 @@ return {
 			},
 			python = {
 				"ruff",
-				"ruff_organize_imports",
 				"ruff_format",
+				"ruff_organize_imports",
 			},
 		},
 		default_format_opts = {
